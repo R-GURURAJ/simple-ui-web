@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default function Cards({ name, descr ,url}) {
+export default function Cards({ name, descr}) {
   return (
-      <div className="card w-96 h-[200px] shadow-xl bg-blue-200 dark:text-black " style={{ backgroundImage:'url(https://lukaszadam.com/images/free-illustrations/cat_desk.svg)'}}>
-          {/* <img src={url} alt="Shoes" className='image-fit' /> */}
+      <div className="card w-96 h-[200px] shadow-xl bg-blue-200 dark:text-black" style={{ backgroundImage:'url(https://lukaszadam.com/images/free-illustrations/cat_desk.svg)'}}>
           <div className="card-body">
               <h2 className="text-3xl font-bold">{name}</h2>
               <p>{descr}</p>
