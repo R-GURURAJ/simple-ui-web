@@ -1,0 +1,194 @@
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const multer = require('multer');
+const path = require('path');
+const Grid = require('gridfs-stream');
+
+const app = express();
+const mongoclient = require("mongodb").MongoClient;
+const ObjectId = require('mongodb').ObjectId;
+let gfs;
+/**
+ * data upload
+*/
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './upload');
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/insertFile', upload.single('file'), (req, res) => {
+
+  console.log('In insert');
+  const file = './upload/' + req.file.originalname;
+  const fileName = req.file.originalname;
+  const decr = fs.readFileSync(`${file}`,{encoding: "base64"})
+  console.log("decrepted");
+     groups
+       .collection(req.body.groupName)
+       .insertOne(
+         { msg:fileName, uid: req.body.uid,type:"file",encode:decr },
+         (err) => {
+           if (err) throw err;
+           res.send("sucessfully Inserted....");
+         }
+       );
+});
+app.post('/classInsert',upload.single('file'),(req,res)=>{
+  const file = './upload/' + req.file.originalname;
+  const fileName = req.file.originalname;
+  const decr = fs.readFileSync(`${file}`,{encoding: "base64"})
+  subjects
+       .collection(req.body.subject)
+       .insertOne(
+         {fileName:fileName,uid:req.body.uid,encod:decr},
+         (err) => {
+           if (err) throw err;
+           res.send("sucessfully Inserted....");
+         }
+       );
+})
+app.post('/fileDownload',(req,res)=>{
+  const subj=req.body.groupName;
+  var val='';
+  groups.collection(subj).findOne(ObjectId(req.body.id),(err,result)=>{
+    if (err) throw err;
+    res.send([result.encode,result.msg]);
+  })
+})
+
+mongoclient.connect("mongodb://0.0.0.0:27017", (err, result) => {
+    if (err) throw err;
+    groups = result.db("Groups");
+    subjects = result.db("Subjects");
+    mainproject = result.db("MainProject");
+    project = result.db("LandT");
+    gfs = Grid(result.db(), mongodb);
+    console.log("Sucessfully connected with File . . .");
+});
+
+module.exports = app;
+
+
+
+
+// const express = require('express');
+// const multer = require('multer');
+// const { MongoClient, GridFSBucket } = require('mongodb');
+// const streamifier = require('streamifier');
+// const fs = require('fs');
+// const cors = require("cors");
+
+// const app = express();
+// const port = 3001;
+
+// app.use(cors());
+
+// // Multer setup for handling file uploads
+// const storage = multer.memoryStorage();
+// const upload = multer({ storage: storage });
+
+// const url = 'mongodb://127.0.0.1:27017';
+// const dbName = 'ClassRoom';
+
+// app.post('/upload', upload.single('file'), async (req, res) => {
+//     const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+//     try {
+//         await client.connect();
+//         const db = client.db(dbName);
+
+//         const collectionName = "DataScience";
+//         const bucket = new GridFSBucket(db, { bucketName: collectionName });
+//         console.log(req.file);
+//         const readableStream = streamifier.createReadStream(req.file.buffer); // Assuming you have 'streamifier' module installed
+
+//         const uploadStream = bucket.openUploadStream(req.file.originalname);
+//         readableStream.pipe(uploadStream);
+
+//         uploadStream.on('finish', () => {
+//             console.log(`File uploaded to ${collectionName} successfully`);
+//             res.send('File uploaded successfully');
+//         });
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).send('Internal Server Error');
+//     } finally {
+//         await client.close();
+//     }
+// });
+
+// app.listen(port, () => {
+//     console.log(`Server is running on http://localhost:${port}`);
+// });
+
+
+
+const express = require('express');
+const multer = require('multer');
+const { MongoClient, GridFSBucket } = require('mongodb');
+const streamifier = require('streamifier');
+const cors = require('cors');
+
+const app = express();
+const port = 3001;
+
+app.use(cors());
+
+// Multer setup for handling file uploads
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+const url = 'mongodb://127.0.0.1:27017';
+const dbName ='ClassRoom';
+
+let client; // Declare the client variable outside the route handler
+
+// Connect to MongoDB when the application starts
+(async () => {
+    try {
+        client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log('Connected to MongoDB');
+    } catch (err) {
+        console.error('Error connecting to MongoDB:', err);
+        process.exit(1); // Exit the process if MongoDB connection fails
+    }
+})();
+
+// Handle file uploads
+app.post('/upload/:collectionName', upload.single('file'), async (req, res) => {
+    try {
+        const db = client.db(dbName);
+        const collectionName = req.params.collectionName;
+        const bucket = new GridFSBucket(db, { bucketName: collectionName });
+        const readableStream = streamifier.createReadStream(req.file.buffer);
+
+        const uploadStream = bucket.openUploadStream(req.file.originalname);
+        readableStream.pipe(uploadStream);
+
+        uploadStream.on('finish', () => {
+            console.log(`File uploaded to ${collectionName} successfully`);
+            res.send('File uploaded successfully');
+        });
+    } catch (err) {
+        console.error('Error handling file upload:', err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+

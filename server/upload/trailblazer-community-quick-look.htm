@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script src="/packs/js/error-reporting-8e64491ffc480c4c970e.js"></script>
+<!-- = OneTrust Cookies Consent Notice -->
+<script>
+  function OptanonWrapper() {
+    function dispatchCookieChoices() {
+      const cookieCategories = {
+        '1': 'required',
+        '2': 'performance',
+        '3': 'functional',
+        '4': 'advertising',
+      }
+  
+      OptanonActiveGroups.split(",").filter(Boolean).forEach(n => {
+        document.dispatchEvent(
+          new CustomEvent(`${cookieCategories[n]}_cookies_enabled`)
+        );
+      })
+    }
+  
+    if (document.readyState == 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        dispatchCookieChoices()
+      });
+    } else {
+      dispatchCookieChoices()
+    }
+  
+    document.addEventListener('trailhead_show_cookie_preferences', function() {
+      Optanon.ToggleInfoDisplay();
+    });
+  }
+</script>
+<script src="https://a.sfdcstatic.com/digital/one-trust/core/stable/scripttemplates/otSDKStub.js" crossorigin="" data-domain-script="8e783e8c-0ad0-475d-8fca-4a03afa0a02a" async="async"></script>
+
+<meta content='#ffffff' name='msapplication-TileColor'>
+<meta content='browserconfig.xml' name='msapplication-config'>
+<meta content='#ffffff' name='theme-color'>
+<link href='/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='/site.webmanifest' rel='manifest'>
+<link color='#ffffff' href='/safari-pinned-tab.svg' rel='mask-icon'>
+<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/favicon.ico' rel='shortcut icon'>
+
+<title>Trailblazer Community: Quick Look | Salesforce Trailhead</title>
+<meta name="description" content="Connect with other Trailblazers by exploring the Trailblazer Community.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@trailhead">
+<meta property="fb:app_id" content="140586622674265">
+<meta property="og:title" content="Trailblazer Community: Quick Look">
+<meta property="og:description" content="Connect with other Trailblazers by exploring the Trailblazer Community.">
+<meta property="og:image" content="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/trailblazer-community-quick-look/5c6eaafd0f616517c0e3b53e863faba3_badge.png">
+<meta property="og:image:url" content="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/trailblazer-community-quick-look/5c6eaafd0f616517c0e3b53e863faba3_badge.png">
+<meta property="og:image:height" content="250">
+<meta property="og:image:width" content="250">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look">
+<meta property="product:brand" content="Trailhead">
+<meta property="product:availability" content="in stock">
+<meta property="product:condition" content="new">
+<meta property="product:price:amount" content="1">
+<meta property="product:price:currency" content="USD">
+<meta property="product:price:retailer_item_id" content="trailblazer-community-quick-look">
+<meta name="url" content="https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="pQnPsX-9JEPqsbSnCfE2M-aQjPgc0VzLEsk73ZwnNbVT8DWiVL75zRchLRfq-brNEyyZs1V4hptBfTXrEvOMKA" />
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0' name='viewport'>
+<meta content='en' name='locale'>
+<link href='https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look' hreflang='en' rel='alternate'>
+<link href='https://trailhead.salesforce.com/de/content/learn/modules/trailblazer-community-quick-look' hreflang='de' rel='alternate'>
+<link href='https://trailhead.salesforce.com/it/content/learn/modules/trailblazer-community-quick-look' hreflang='it' rel='alternate'>
+<link href='https://trailhead.salesforce.com/fr/content/learn/modules/trailblazer-community-quick-look' hreflang='fr' rel='alternate'>
+<link href='https://trailhead.salesforce.com/es/content/learn/modules/trailblazer-community-quick-look' hreflang='es' rel='alternate'>
+<link href='https://trailhead.salesforce.com/es-MX/content/learn/modules/trailblazer-community-quick-look' hreflang='es-mx' rel='alternate'>
+<link href='https://trailhead.salesforce.com/pt-BR/content/learn/modules/trailblazer-community-quick-look' hreflang='pt-br' rel='alternate'>
+<link href='https://trailhead.salesforce.com/ja/content/learn/modules/trailblazer-community-quick-look' hreflang='ja' rel='alternate'>
+<link href='https://trailhead.salesforce.com/ko/content/learn/modules/trailblazer-community-quick-look' hreflang='ko' rel='alternate'>
+<link href='https://trailhead.salesforce.com/zh-CN/content/learn/modules/trailblazer-community-quick-look' hreflang='zh-cn' rel='alternate'>
+<link href='https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look' hreflang='x-default' rel='alternate'>
+
+<link rel="canonical" href="https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look">
+<meta name="apple-itunes-app" content="app-id=1478801670"></meta>
+<meta name="slack-app-id" content="A02CBL2KKDE"></meta>
+<link rel="stylesheet" media="all" href="/assets/application-d681c2bd800d1318d8d73a18c08272581318906b468091cabf4333be2099093e.css" />
+
+
+<link rel="stylesheet" media="screen" href="/packs/css/libs-ddbb97c3.css" />
+<link rel="stylesheet" media="screen" href="/packs/css/styles-93c25d89.css" />
+<link rel="stylesheet" media="screen" href="/packs/css/atomic-6dbb6162.css" />
+<link rel="stylesheet" media="print" href="/assets/print-291a9c148552af775ae0646e7d4bfb87ac4f0e77f40cbd214234e7aa0eb39509.css" />
+<script type='module'>
+import { set } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-env.js";
+import { setLocale } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-locale.js";
+set("DEBUG", false);
+setLocale("en");
+
+
+</script>
+<script type='module'>
+import { set } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-env.js";
+set("API_HOST", "https://trailhead.salesforce.com");
+
+
+</script>
+<script type='module'>
+import { set } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-env.js";
+set("EXPERIENCE_API_HOST", "https://mobile.api.trailhead.com/graphql");
+
+
+</script>
+<script type='module'>
+import { set } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-env.js";
+set("TBID_COMMUNITY_URL", "https://trailblazer.me");
+
+
+</script>
+<script type='module'>
+import { set } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-env.js";
+set("TBID_PROFILE_URL", "https://www.salesforce.com/trailblazer/");
+
+
+</script>
+<script type='module'>
+import { setAccessTokenResolver } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-auth.js";
+import { registerMiddleware } from "https://ui.trailhead.com/components/v4.25.8/modules/trailhead-client-fetch.js";
+
+setAccessTokenResolver("Trailhead Web", async () => {
+ return window.localStorage.getItem("sf_access_token");
+});
+
+registerMiddleware({
+  name: "Trailhead Web",
+  handleRequest: async (request) => {
+    let orgIds = "00D50000000NtVrEAK";
+    if (!orgIds) return request;
+    let headers = {
+      ...request.init.headers,
+      "X-Trailhead-Api-Organization-Ids": orgIds,
+    };
+    if (/\/graphql$/.test(request.url)) {
+      headers["apollographql-client-name"] = "Trailhead Web";
+    }
+    return {
+      ...request,
+      init: {
+        ...request.init,
+        headers
+      }
+    }
+  },
+  handleResponse: async (response, request) => {
+    if (response.status === 401) {
+      if(!window.SFIDWidget) {
+        let tryCount = parseInt(window.sessionStorage.getItem("reauth_try_count") || 0);
+
+        if(tryCount === 0) {
+          window.sessionStorage.setItem("reauth_try_count", 1);
+          document.location = '/auth/mytrailhead';
+        } else {
+          window.sessionStorage.setItem("reauth_try_count", 0);
+          document.location = '/auth/mytrailhead/logout';
+        }
+      }
+    }
+    return response;
+  },
+});
+
+</script>
+
+<script id="sf_access_token_script">
+  try {
+      window.localStorage.setItem("sf_access_token", "eyJraWQiOiJ4ZUlmbGJzOENMMUZpc2QyV0ZDVVRrdUpYaXVsQXFjM1lQcGdKQ0dfZWhjIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULnZLamEwZk9lZGp2QXlFbGdUUnZ0X2w3MmJpc3pZWHB5WUx4VE9mRHRYM2ciLCJpc3MiOiJodHRwczovL3RiaWQuZGlnaXRhbC5zYWxlc2ZvcmNlLmNvbS9vYXV0aDIvYXVzNXY5NDY2d2RxTGRZME82OTciLCJhdWQiOiJhcGk6Ly90cmFpbGJsYXplciIsImlhdCI6MTcwNDM2MjAyOSwiZXhwIjoxNzA0MzY1NjI5LCJjaWQiOiIwb2E1djkzZWJnQUdxa0ZTbjY5NyIsInVpZCI6IjAwdWFienJ5YXNlWjREenVWNjk3Iiwic2NwIjpbIm9wZW5pZCIsImVtYWlsIiwicHJvZmlsZSJdLCJhdXRoX3RpbWUiOjE3MDQzNjIwMjgsInN1YiI6ImhhcmlzaHBjMjAwM0BnbWFpbC5jb20ifQ.Wc1Vwxpr6o2Dq-LeuezEEXXAJtN6zJagFUKYQVeSvH2HtAMZYz4zgEz039f5wtwMHb4TXdO-syvMW4r3VJ4uz8ZWC_SPygWossXFWCpm3aZfKxhvqdLvqkqpsMMIResVa7GEPttPQ7ApSaxA5UjsYKkh0FRpv182Q4rS9XzKB84IwRq2aVCptBvZP3P6md5OKMvWOL3akXXEZN2SIxsGf36lq55elZGjcj2vyK3Qilxvb5T46Fs5gNoNN-T5UWnjCsnFx6Wb_K6-mTfo9RBdMIdZi_Ww6SuwaXEvyz5m8PofVdoMdAa7vd3TJ6qC0of9vvtcYDY7eg3Ec-RU-uHn_g");
+  } catch (e) {
+      console.error('Error setting/removing access token:', e);
+  }
+  document.getElementById("sf_access_token_script").remove();
+</script>
+
+<script>
+  window.thComponentsUrl = function(path) {
+    return "https://ui.trailhead.com/components/v4.25.8" + path;
+  }
+</script>
+<div id='https://ui.trailhead.com/lx-components/v1.6.6'></div>
+<link href='https://ui.trailhead.com/components/v4.25.8/css/tds.css' rel='stylesheet'>
+<link href='https://ui.trailhead.com/components/v4.25.8/css/tds-theme-provider.css' rel='stylesheet'>
+<script src='https://ui.trailhead.com/components/v4.25.8/modules/th-alert.js' type='module'></script>
+<script src='https://ui.trailhead.com/components/v4.25.8/modules/th-footer.js' type='module'></script>
+<style>
+  :root {
+    --tds-z-index-tooltip: 90000;
+    --tds-z-index-overlay: 29998;
+    --tds-z-index-modal: 29999;
+  }
+</style>
+
+<script>
+  window.locale = "en"
+</script>
+<script src='/api/v1/ui/auth.js'></script>
+
+<script src="/packs/js/vendorCommon-d44188f0abb3fc3632c8.chunk.js"></script>
+<script src="/packs/js/vendor-9275e3d21f86549f7b8d.chunk.js"></script>
+<script src="/packs/js/client-side-49d803bc9166f79096ac.js"></script>
+<script src="/packs/js/locales-2211138937fc57c9c5cd.chunk.js"></script>
+<script src="/packs/js/components-f884dd5d06cb4f4cdde1.js"></script>
+<script src="/packs/js/ua-tracking-e6bbf10659183ba77483.js"></script>
+<script src="/packs/js/visitor-cookies-155deeea6d65f7497ec0.js"></script>
+<script src="/packs/js/cookie-consent-callbacks-ea5cab6df22df28ced9f.js"></script>
+<script src="/packs/js/mobile-a11y-cc7ba31d3a7f179d9874.js"></script>
+
+
+<script id="tbid_script">
+    try {
+        window.localStorage.setItem("tbid", "005rk00l7p20yekAAA");
+    } catch (e) {
+        console.error('Error setting/removing tbid:', e);
+    }
+    document.getElementById("tbid_script").remove();
+</script>
+
+</head>
+<body class='theme--trailhead trailhead-locale-en' id='atomic'>
+<div id='main-wrapper'>
+<style>
+  .th-branding__border-color {
+    border-color: #00a1df !important;
+  }
+  .th-branding__background-color--primary-light {
+    background-color: rgba(0, 161, 223, 0.05) !important;
+  }
+  
+  .th-branding__background-color--secondary {
+      background-color: #00407e !important;
+  }
+</style>
+
+
+  
+<script src="/packs/js/digital-nav-d3a9299b5b07e9ea4c12.js"></script>
+
+
+<style>
+  .skip-nav {
+    background: var(--tds-color-white);
+    border-bottom-right-radius: var(--tds-radius-md);
+    box-shadow: var(--tds-shadow-md);
+    padding: var(--tds-spacing-3) var(--tds-spacing-5);
+    left: 0px;
+    position: absolute;
+    transition: top 0.5s ease 0s;
+    z-index: 20001;
+    text-align: center;
+    color: var(--tds-color-brand);
+    top: calc(var(--tds-spacing-40) * -1);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .skip-nav:hover {
+    text-decoration: underline;
+  }
+  .skip-nav:focus {
+    top: 0;
+    transition: top 0.1s ease 0s;
+  }
+
+  .subnav {
+    padding: 0 2.5rem 0 2rem;
+  }
+
+  @media screen and (max-width: 1279px) {
+    /* mobile */
+    #global-nav-container {
+      min-height: 112px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    /* desktop */
+    #global-nav-container {
+      min-height: 144px;
+    }
+  }
+</style>
+
+<a class="skip-nav" href="#main">Skip to main content</a>
+
+<div id="global-nav-container">
+    <hgf-c360contextnav id="contextnav"></hgf-c360contextnav>
+
+</div>
+
+<script src="https://a.sfdcstatic.com/digital/xsf/components/v1-stable/navs-fonts.js" type="module"></script>
+<script async>
+  window.Trailhead = window.Trailhead || {};
+  window.Trailhead.property = "trailhead";
+  window.Trailhead.communityUri = "https://trailblazer.me";
+  window.Trailhead.communityApiUrl = "https://community.api.trailhead.com";
+  window.wpdata = {};
+  window.wpdata.navigation = {};
+  window.wpdata.navigation["contextnav-c360"] = {"ID":1,"newWindowAlt":"link opens in new window","isLogoEnabled":false,"variation":"static","propertyTitle":{"ID":2,"label":"Trailhead","url":"/"},"propertyLogo":{"ID":3,"alt":"Trailhead"},"menuGroup":{"ID":4,"menuItems":[{"ID":5,"link":{"ID":6,"label":"Today","url":"/today"}},{"ID":7,"title":"Learn","submenu":[{"ID":8,"menuItems":[{"ID":9,"link":{"ID":10,"label":"Trails","url":"/trails"},"description":"Follow guided learning paths"},{"ID":11,"link":{"ID":12,"label":"Trailmixes","url":"/my-trailmixes"},"description":"Create and follow custom learning playlists"},{"ID":13,"link":{"ID":14,"label":"Trailhead Academy","url":"https://trailheadacademy.salesforce.com/","target":"_blank"},"description":"Learn directly from experts"},{"ID":15,"link":{"ID":16,"label":"Trailhead GO","url":"/trailhead-go"},"description":"Skill up anytime, anywhere"}],"eyebrowHeading":"Learn in-demand skills","hasSeparator":true},{"ID":17,"menuItems":[{"ID":18,"link":{"ID":19,"label":"Modules","url":"/modules"},"description":"Learn new skills in bite-sized units"},{"ID":20,"link":{"ID":21,"label":"Projects","url":"/projects"},"description":"Get hands-on with step-by-step instructions"},{"ID":22,"link":{"ID":23,"label":"Trailhead Quests","url":"/quests"},"description":"Learn new skills and win fun prizes"}],"eyebrowHeading":"Choose your own learning adventure","hasSeparator":true},{"ID":24,"menuItems":[{"ID":25,"link":{"ID":26,"label":"Career Paths","url":"/career-path"},"description":"Explore which career is right for you"},{"ID":27,"link":{"ID":28,"label":"Trailblazer Career Marketplace","url":"/careers/overview"},"description":"Discover opportunities in the Salesforce ecosystem"},{"ID":29,"link":{"ID":30,"label":"Salesforce Fundamentals","url":"/trailblazerconnect/fundamentals"},"description":"Learn the skills to start your Salesforce career"},{"ID":31,"link":{"ID":32,"label":"Trailblazer Blog","url":"https://www.salesforce.com/blog/category/trailblazer/","target":"_blank"},"description":"Discover our latest articles to drive success now"}],"eyebrowHeading":"Grow your career"}]},{"ID":33,"title":"Credentials","submenu":[{"ID":34,"menuItems":[{"ID":35,"link":{"ID":36,"label":"Certifications","url":"/credentials/administratoroverview"},"description":"Earn Salesforce credentials"},{"ID":37,"link":{"ID":38,"label":"Superbadges \u0026 Super Sets","url":"/superbadges"},"description":"Prove your skills with real world business challenges"}],"eyebrowHeading":"Earn resume-worthy credentials","hasSeparator":true},{"ID":39,"menuItems":[{"ID":40,"link":{"ID":41,"label":"Maintain Certifications","url":"/content/learn/trails/maintain-your-salesforce-certifications"},"description":"Maintain your Certifications"},{"ID":42,"link":{"ID":43,"label":"Verify Certifications","url":"/credentials/verification"},"description":"Confirm Certification Status"},{"ID":44,"link":{"ID":45,"label":"Take Free Certification Prep","url":"/credentials/cert-days"},"description":"Prepare for your certification"}],"eyebrowHeading":"Discover Credential Resources"}]},{"ID":46,"title":"Community","submenu":[{"ID":47,"menuItems":[{"ID":48,"link":{"ID":49,"label":"Feed","url":"/trailblazer-community/feed"},"description":"Connect with fellow Trailblazers"},{"ID":50,"link":{"ID":51,"label":"Groups","url":"/trailblazer-community/groups"},"description":"Join groups to meet and collaborate with Trailblazers"},{"ID":52,"link":{"ID":53,"label":"Topics","url":"/trailblazer-community/topics"},"description":"Discover and follow featured and trending topics"},{"ID":54,"link":{"ID":55,"label":"Group Meetings","url":"https://trailblazercommunitygroups.com/"},"description":"Join local community group meetings"}],"eyebrowHeading":"Connect to the Trailblazer Community","hasSeparator":true},{"ID":56,"menuItems":[{"ID":57,"link":{"ID":58,"label":"Be A Trailblazer","url":"https://www.salesforce.com/company/be-a-trailblazer/?sfdc-redirect=387","target":"_blank"},"description":"Build your career with Salesforce"},{"ID":61,"link":{"ID":62,"label":"Trailblazer Stories","url":"https://www.salesforce.com/blog/category/trailblazer-story/","target":"_blank"},"description":"Hear from fellow Trailblazers"},{"ID":63,"link":{"ID":64,"label":"Trailblazer Connect","url":"/trailblazerconnect/"},"description":"Explore mentorship and employment opportunities"}],"eyebrowHeading":"Quick links"}]},{"ID":65,"title":"Help","submenu":[{"ID":66,"menuItems":[{"ID":67,"link":{"ID":68,"label":"Trailhead Help","url":"/help"},"description":"Get help with Trailhead, Salesforce Certifications, Trailhead Academy, and more"},{"ID":69,"link":{"ID":70,"label":"Hands-On Challenge Help","url":"/help?ux=hoc"},"description":"Get help when stuck on a challenge"},{"ID":71,"link":{"ID":72,"label":"Salesforce Help","url":"https://help.salesforce.com/s/","target":"_blank"},"description":"Support for Salesforce products and services"}],"eyebrowHeading":"How can we help you?"}]},{"ID":73,"title":"More","submenu":[{"ID":74,"menuItems":[{"ID":75,"link":{"ID":76,"label":"IdeaExchange","url":"https://ideas.salesforce.com/","target":"_blank"}},{"ID":77,"link":{"ID":78,"label":"AppExchange","url":"https://appexchange.salesforce.com/","target":"_blank"}},{"ID":79,"link":{"ID":80,"label":"Success Now","url":"https://www.salesforce.com/campaign/successnow","target":"_blank"}},{"ID":81,"link":{"ID":82,"label":"Trailhead for Companies","url":"/for-companies","target":"_blank"}},{"ID":83,"link":{"ID":84,"label":"Customer Stories","url":"/customer-spotlights","target":"_blank"}},{"ID":85,"link":{"ID":86,"label":"Sales Enablement","url":"https://salesforce.com/products/sales-cloud/tools/sales-enablement","target":"_blank"}},{"ID":87,"link":{"ID":88,"label":"Trail Tracker","url":"https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EFpAtUAL","target":"_blank"}}]}]}]},"utilityNavigation":{"ID":89}};
+</script>
+
+<script async>
+  let globalNav = async function() {
+    // wait for it to be defined before configuring
+    await customElements.whenDefined('hgf-c360nav');
+
+    let globalNavConfig = {"id":"global-nav","hideContent":"false","origin":"https://wp.sfdcdigital.com/en-US/wp-json","tbidModuleOverride":"https://trailhead.salesforce.com/assets/iis-tbid-45ca03ad5930d87d209d07efe9321ed3e51325405a9b6e795e29e923ef4f08b0.js","contextNavEnabled":"true","contextMenuOverride":"true","search":"true","searchOrganizationId":"org62salesforce","searchAccessToken":"xx358122e7-f516-40e1-8467-8837d29c6998","searchPlaceholder":"Search Trailhead","searchSiteUrl":"https://trailhead.salesforce.com/search","searchSite":"th","searchHub":"Trailhead","searchPipeline":"Trailhead","locale":"","searchWithQuickLinks":"false","searchLocale":"en","contactMenuOverride":"true","contactLinksOverride":"[{\"label\":\"Contact Sales\",\"url\":\"https://www.salesforce.com/company/contact-us/?d=cta-header-9\",\"target\":\"_self\"},{\"label\":\"Contact Support\",\"url\":\"https://help.salesforce.com/s/support\",\"target\":\"_self\"},{\"label\":\"Contact Trailhead\",\"url\":\"https://trailhead.salesforce.com/help?support=home\",\"target\":\"_self\"}]","loginTrailblazerLabel":"Trailhead","authRank":"Scout","authPointCount":"100 points","authBadgeCount":"1 badges","authMessageNotif":"","authNotifLabel":"","loginHostLinks":"[{\"ID\":0,\"link\":{\"label\":\"Favorites\",\"url\":\"/users/favorites\"}},{\"ID\":1,\"link\":{\"label\":\"Messages\",\"url\":\"/trailblazer-community/inbox\"}},{\"ID\":2,\"link\":{\"label\":\"Hands-On Orgs\",\"url\":\"/users/profiles/orgs\"}}]"};
+
+    let globalNav = document.createElement('hgf-c360nav');
+    Object.entries(globalNavConfig).forEach(entry => {
+      globalNav[entry[0]] = entry[1];
+    });
+    document.getElementById("global-nav-container").prepend(globalNav);
+  }
+
+  globalNav();
+</script>
+
+<script type="module">
+  // wait for it to be defined before configuring
+  await customElements.whenDefined('hgf-c360nav');
+
+  if(localStorage.getItem('sf_access_token')) {
+    let notificationCount = await fetch(`${window.Trailhead.communityApiUrl}/graphql`, {
+      "headers": {
+        "accept": "application/json; charset=utf-8",
+        "accept-language": "en-US,en;q=0.9",
+        "apollographql-client-name": "Trailhead Web",
+        "authorization": `Bearer ${localStorage.getItem('sf_access_token')}`,
+        "content-type": "application/json; charset=utf-8"
+      },
+      "body": "{\"operationName\":\"UnreadConversationsCount\",\"query\":\"query UnreadConversationsCount {\\n    inbox {\\n      unreadConversationsCount {\\n        unreadCount\\n        hasMore\\n      }\\n    }\\n  }\"}",
+      "method": "POST"
+    }).then((res) => res.json()).then((res) => res.data.inbox.unreadConversationsCount.unreadCount);
+
+    if(notificationCount > 0) {
+      document.getElementById("global-nav").authMessageNotif = 'true';
+
+      let nav = document.getElementById("global-nav");
+      nav.authMessageNotif = 'true';
+      let newLinks = JSON.parse(nav.loginHostLinks);
+      newLinks[1]["count"] = notificationCount;
+      nav.loginHostLinks = JSON.stringify(newLinks);
+    }
+  }
+</script>
+
+
+  <script>
+  window.Trailhead = window.Trailhead || {};
+  window.Trailhead.ContentService = window.Trailhead.ContentService || {};
+  window.Trailhead.ContentService.inPreview = false
+</script>
+
+  <th-alert cookie-key='notifier_45048923f875aac3fe13d0d6db96bbc4' variant='info'>
+Your Trailblazer Account will be offline for scheduled maintenance on 1/13/2024. During this downtime, you won't be able to log in to any related applications, including Help and Training, AppExchange, Trailhead, and Trailblazer Community, and more.
+</th-alert>
+
+
+
+<main id='main'>
+<div data-react-class="ModuleHeader" data-react-props="{&quot;content&quot;:{&quot;apiName&quot;:&quot;trailblazer-community-quick-look&quot;,&quot;color&quot;:&quot;#ffc400&quot;,&quot;contentUid&quot;:&quot;0260fdbd-fe4b-33d5-ec0b-e32d85fdb425&quot;,&quot;description&quot;:&quot;Connect with other Trailblazers by exploring the Trailblazer Community.&quot;,&quot;image&quot;:&quot;https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/trailblazer-community-quick-look/5c6eaafd0f616517c0e3b53e863faba3_badge.png&quot;,&quot;points&quot;:&quot;100&quot;,&quot;title&quot;:&quot;Trailblazer Community: Quick Look&quot;,&quot;subTitle&quot;:&quot;Module&quot;,&quot;type&quot;:&quot;module&quot;,&quot;estimatedTime&quot;:&quot;~5 mins&quot;,&quot;unitCount&quot;:1,&quot;path&quot;:&quot;https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look?trailmix_creator_id=smartbridgesupport\u0026trailmix_slug=trailmix-by-smartinternz-developer&quot;,&quot;private&quot;:false,&quot;preview&quot;:null,&quot;tags&quot;:[{&quot;title&quot;:&quot;General&quot;,&quot;filter&quot;:&quot;general&quot;,&quot;type&quot;:&quot;product&quot;,&quot;genre&quot;:&quot;modules&quot;},{&quot;title&quot;:&quot;Beginner&quot;,&quot;filter&quot;:&quot;beginner&quot;,&quot;type&quot;:&quot;level&quot;,&quot;genre&quot;:&quot;modules&quot;},{&quot;title&quot;:&quot;Business User&quot;,&quot;filter&quot;:&quot;user&quot;,&quot;type&quot;:&quot;role&quot;,&quot;genre&quot;:&quot;modules&quot;}]},&quot;labels&quot;:{&quot;preview&quot;:&quot;preview&quot;,&quot;updated&quot;:&quot;Updated %{date}&quot;,&quot;completed&quot;:&quot;Completed %{date}&quot;,&quot;due&quot;:&quot;Due %{date}&quot;,&quot;points&quot;:&quot;+%{n} points&quot;,&quot;currency&quot;:&quot;$%{n}&quot;,&quot;registerNow&quot;:&quot;Register Now&quot;,&quot;progress&quot;:&quot;Progress: %{n}%&quot;,&quot;previewTooltip&quot;:&quot;Content Collection: %{namespace}, Release: %{releasedAt}. Last updated on %{updatedAt}.&quot;,&quot;showNUnits&quot;:&quot;Show %{n} Units&quot;,&quot;hideNUnits&quot;:&quot;Hide %{n} Units&quot;,&quot;showNSteps&quot;:&quot;Show %{n} Steps&quot;,&quot;hideNSteps&quot;:&quot;Hide %{n} Steps&quot;,&quot;unitCompleted&quot;:&quot;Completed&quot;,&quot;unitIncomplete&quot;:&quot;Incomplete&quot;},&quot;assetPaths&quot;:{&quot;loader&quot;:&quot;/assets/ajax-loader-round-004b46cbdbf5c291cff9332ee40126c64fefef0921f0d04ea936b275b278fbf4.gif&quot;},&quot;user&quot;:{&quot;slug&quot;:&quot;harishvroxdt54c4kch&quot;,&quot;completedCount&quot;:0,&quot;estimatedTime&quot;:&quot;~5 mins left&quot;,&quot;finishedAt&quot;:null,&quot;favorited&quot;:false},&quot;trailmixes&quot;:[],&quot;trailmixButtonLabels&quot;:{&quot;addToTrailmix&quot;:&quot;Add to Trailmix&quot;}}" data-react-cache-id="ModuleHeader-0"></div>
+<div class='tds-bg_sand slds-p-horizontal_x-large slds-p-bottom_x-large'>
+<div class='slds-container_medium slds-container_center'>
+<div data-react-class="ModuleUnits" data-react-props="{&quot;units&quot;:[{&quot;complete&quot;:false,&quot;completionTime&quot;:&quot;~5 mins&quot;,&quot;title&quot;:&quot;Explore the Trailblazer Community&quot;,&quot;path&quot;:&quot;/content/learn/modules/trailblazer-community-quick-look/explore-the-trailblazer-community?trailmix_creator_id=smartbridgesupport\u0026trailmix_slug=trailmix-by-smartinternz-developer&quot;}],&quot;labels&quot;:{&quot;unitCompleted&quot;:&quot;Completed&quot;,&quot;unitIncomplete&quot;:&quot;Incomplete&quot;},&quot;className&quot;:&quot;tds-dotted-trail&quot;}" data-react-cache-id="ModuleUnits-0"></div>
+<div data-react-class="ContentEndCap" data-react-props="{&quot;content&quot;:{&quot;apiName&quot;:&quot;trailblazer-community-quick-look&quot;,&quot;color&quot;:&quot;#ffc400&quot;,&quot;contentUid&quot;:&quot;0260fdbd-fe4b-33d5-ec0b-e32d85fdb425&quot;,&quot;description&quot;:&quot;Connect with other Trailblazers by exploring the Trailblazer Community.&quot;,&quot;image&quot;:&quot;https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/trailblazer-community-quick-look/5c6eaafd0f616517c0e3b53e863faba3_badge.png&quot;,&quot;points&quot;:&quot;100&quot;,&quot;title&quot;:&quot;Trailblazer Community: Quick Look&quot;,&quot;subTitle&quot;:&quot;Module&quot;,&quot;type&quot;:&quot;module&quot;,&quot;estimatedTime&quot;:&quot;~5 mins&quot;,&quot;unitCount&quot;:1,&quot;path&quot;:&quot;https://trailhead.salesforce.com/content/learn/modules/trailblazer-community-quick-look?trailmix_creator_id=smartbridgesupport\u0026trailmix_slug=trailmix-by-smartinternz-developer&quot;,&quot;private&quot;:false,&quot;preview&quot;:null,&quot;tags&quot;:[{&quot;title&quot;:&quot;General&quot;,&quot;filter&quot;:&quot;general&quot;,&quot;type&quot;:&quot;product&quot;,&quot;genre&quot;:&quot;modules&quot;},{&quot;title&quot;:&quot;Beginner&quot;,&quot;filter&quot;:&quot;beginner&quot;,&quot;type&quot;:&quot;level&quot;,&quot;genre&quot;:&quot;modules&quot;},{&quot;title&quot;:&quot;Business User&quot;,&quot;filter&quot;:&quot;user&quot;,&quot;type&quot;:&quot;role&quot;,&quot;genre&quot;:&quot;modules&quot;}]},&quot;labels&quot;:{&quot;preview&quot;:&quot;preview&quot;,&quot;updated&quot;:&quot;Updated %{date}&quot;,&quot;completed&quot;:&quot;Completed %{date}&quot;,&quot;due&quot;:&quot;Due %{date}&quot;,&quot;points&quot;:&quot;+%{n} points&quot;,&quot;currency&quot;:&quot;$%{n}&quot;,&quot;registerNow&quot;:&quot;Register Now&quot;,&quot;progress&quot;:&quot;Progress: %{n}%&quot;,&quot;previewTooltip&quot;:&quot;Content Collection: %{namespace}, Release: %{releasedAt}. Last updated on %{updatedAt}.&quot;,&quot;showNUnits&quot;:&quot;Show %{n} Units&quot;,&quot;hideNUnits&quot;:&quot;Hide %{n} Units&quot;,&quot;showNSteps&quot;:&quot;Show %{n} Steps&quot;,&quot;hideNSteps&quot;:&quot;Hide %{n} Steps&quot;,&quot;unitCompleted&quot;:&quot;Completed&quot;,&quot;unitIncomplete&quot;:&quot;Incomplete&quot;},&quot;assetPaths&quot;:{&quot;loader&quot;:&quot;/assets/ajax-loader-round-004b46cbdbf5c291cff9332ee40126c64fefef0921f0d04ea936b275b278fbf4.gif&quot;},&quot;user&quot;:{&quot;slug&quot;:&quot;harishvroxdt54c4kch&quot;,&quot;completedCount&quot;:0,&quot;estimatedTime&quot;:&quot;~5 mins left&quot;,&quot;finishedAt&quot;:null,&quot;favorited&quot;:false}}" data-react-cache-id="ContentEndCap-0"></div>
+<div class='slds-m-top_x-large slds-text-align_center' data-test='module-sidebar'>
+<h2 class='slds-m-bottom_xx-small'>
+<strong>Available on these trails</strong>
+</h2>
+<ul data-test='module-sidebar-trails'>
+<li class='slds-text-body_small'>
+<a href="/content/learn/trails/salesforce_advantage">Get to Know Salesforce
+</a></li>
+<li class='slds-text-body_small'>
+<a href="/content/learn/trails/explore-the-best-of-trailhead">Find Your Way Around Trailhead
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</main>
+
+  <th-footer api-path="/api/v1/ui/footer.js" locale=""></th-footer>
+
+</div>
+
+
+
+
+<script>
+  if (typeof dataLayer === 'undefined') {
+    dataLayer = [];
+  }
+</script>
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-KJPMZK' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<script type="text/plain" class="optanon-category-1" charset="UTF-8">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJPMZK');
+
+</script>
+<script type="text/plain" class="optanon-category-1" charset="UTF-8">if (typeof dataLayer !== 'undefined') {
+  var eventKeys = [
+  {
+    "lang": "en",
+    "trailmix_id": "02cb1a91-bcec-5c8c-3d81-5f120d5eabec",
+    "trailmix_slug": "trailmix-by-smartinternz-developer",
+    "trailmix_creator_slug": "smartbridgesupport",
+    "event": "trailmix_viewed"
+  }
+];
+  eventKeys.forEach(function (eventObject) {
+    dataLayer.push(eventObject);
+  });
+}
+
+
+
+</script><script>
+  (function(global) {
+    if(!global.Trailhead) {
+      global.Trailhead = {};
+    }
+  
+    global.Trailhead.gtmDebugging = false;
+  })(window);
+</script>
+<script src="/assets/metrics/interaction_tracking-855ada6c1cb4b23a59e6f2b594bd51edf698d582656ea18eb52c1f57c75f2152.js"></script>
+<script type='module'>
+import { setTbidUserInfoResolver } from "https://www.salesforce.com/c/public/app/mjs/identity.js";
+setTbidUserInfoResolver( async () => {
+  const tbid = window.localStorage.getItem('tbid');
+  return { id: tbid };
+});
+</script>
+<div id='interaction-studio-placeholder'></div>
+<script type="text/plain" class="optanon-category-4" charset="UTF-8">let addInteractionStudioBeacon = () => {
+  let isTagSrc = "//cdn.evgnet.com/beacon/salesforce/sf_shared_prod/scripts/evergage.min.js";
+  let isPlaceholder = document.getElementById("interaction-studio-placeholder");
+  let isTag = document.createElement("script");
+  isTag.setAttribute("src", isTagSrc);
+  isTag.setAttribute("defer", true);
+  isPlaceholder.replaceWith(isTag);
+}
+
+let checkIfGaLoaded = () => {
+  return new Promise((resolve, reject) => {
+    let timeStart = Date.now();
+    const TIMEOUT = 5000;
+
+    let _isLoaded = function() {
+      if (Date.now() - timeStart > TIMEOUT) {
+        reject('Timeout. Google analytics expected but not loaded');
+        return;
+      }
+      if (window.ga && ga.create) {
+        resolve();
+        return;
+      } else {
+        setTimeout(_isLoaded, 500);
+      }
+    };
+
+  _isLoaded();
+  });
+}
+
+checkIfGaLoaded().then((result => {
+  addInteractionStudioBeacon();
+}))
+.catch(console.error);
+
+</script>
+
+<style>
+:root {
+  --tds-z-index-toast: 90000;
+  --tds-toaster-offset-top: 150px;
+}
+</style>
+
+
+<tds-toaster></tds-toaster>
+
+<script src="/packs/js/toaster-64c951c289bc77a69ea6.js" defer="defer"></script>
+
+<script>
+  var Trailhead = Trailhead || {};
+</script>
+<!--  on :  (production Deployed: ) -->
+</body>
+</html>
