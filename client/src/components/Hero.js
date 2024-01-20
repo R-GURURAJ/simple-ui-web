@@ -4,7 +4,7 @@ import HeroLeft from './Hero/HeroLeft'
 
 function Hero() {
     return (
-        <div className='flex flex-1 justify-around items-center overflow-y-scroll bg-red-200'>
+        <div className='flex flex-1 justify-around items-center overflow-y-scroll'>
             <HeroRight/>
             <HeroLeft/>
         </div>
